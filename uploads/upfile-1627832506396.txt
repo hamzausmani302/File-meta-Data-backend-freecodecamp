@@ -1,0 +1,20 @@
+visited = [A ,B , D , C ,E , G , F ]
+
+
+        A B D C E G F
+A - 0	0 0 0 0 0 0 0
+B -     4 4 4 4 4 4 4
+C -       6 6 6 6 6 6 	
+D -     3 3 3 3 3 3 3
+E - 	  6 6 6 6 6 6
+F -	          7 7
+G -         4 4 4 4 4
+
+
+queue at A= [B,D]
+queue at B = [D,C,E]
+queue at D = [C ,E , G]
+queue at C = [E , G ]
+queue at E = [G ]
+queue at G = [F] 
+queue at F = []
