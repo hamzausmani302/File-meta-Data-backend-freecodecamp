@@ -21,7 +21,7 @@ class DAO{
     static async get_image(img_obj){
           
           try{
-          const image = await Image.find(img_obj);
+          const image = await Image.findOne(img_obj);
           
           if(image){
             return image;

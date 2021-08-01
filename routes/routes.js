@@ -64,9 +64,15 @@ router.post('/api/fileanalyse' , function(req,res){
   
 })
 
-router.get('/api/uploads/:id' , function(req,res){
+router.get('/api/uploads/:id' , async function(req,res){
+      let obj ={};
+      obj._id = req.params.id;
       
-      res.sendFile(__dirname + '/' + req.params.id + ".pptx");
+      const image = await db.get_image(obj);
+      if(image == undefined){return res.send({error : "error fetcguibg"})}
+      console.log(image);
+
+      res.sendfile(image.path);
 })
 
 module.exports = router;
